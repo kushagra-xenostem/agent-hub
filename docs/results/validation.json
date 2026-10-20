@@ -1,0 +1,354 @@
+[
+ {
+  "plan": "none",
+  "variant": "all_checks",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7901.4889,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "none",
+  "variant": "no_output_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.3667,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7697.3889,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.916030534351145,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "none",
+  "variant": "no_arg_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9778,
+   "success_ci": [
+    0.9226,
+    0.9939
+   ],
+   "correct_rate": 0.9778,
+   "recovery_rate": 0.92,
+   "mean_llm_calls": 4.4,
+   "mean_tool_runs": 3.3333,
+   "mean_retries": 0.0,
+   "mean_tokens": 7918.7889,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9040404040404041,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "none",
+  "variant": "no_observation_cap",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7901.4889,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "all_checks",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9889,
+   "success_ci": [
+    0.9397,
+    0.998
+   ],
+   "correct_rate": 0.9889,
+   "recovery_rate": 0.9811,
+   "mean_llm_calls": 4.4,
+   "mean_tool_runs": 3.7444,
+   "mean_retries": 0.7556,
+   "mean_tokens": 7823.1778,
+   "mean_latency_s": 1.0226,
+   "p95_latency_s": 4.0,
+   "arg_validity": 0.9191919191919192,
+   "injected_per_run": 0.7667
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "no_output_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.6556,
+   "success_ci": [
+    0.5528,
+    0.7455
+   ],
+   "correct_rate": 0.6556,
+   "recovery_rate": 0.2955,
+   "mean_llm_calls": 5.6444,
+   "mean_tool_runs": 3.2222,
+   "mean_retries": 0.0,
+   "mean_tokens": 11781.1667,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9311023622047244,
+   "injected_per_run": 0.6333
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "no_arg_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9778,
+   "success_ci": [
+    0.9226,
+    0.9939
+   ],
+   "correct_rate": 0.9778,
+   "recovery_rate": 0.9623,
+   "mean_llm_calls": 4.3556,
+   "mean_tool_runs": 4.0111,
+   "mean_retries": 0.7222,
+   "mean_tokens": 7816.8778,
+   "mean_latency_s": 1.0783,
+   "p95_latency_s": 7.0,
+   "arg_validity": 0.9132653061224489,
+   "injected_per_run": 0.7333
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "no_observation_cap",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9889,
+   "success_ci": [
+    0.9397,
+    0.998
+   ],
+   "correct_rate": 0.9889,
+   "recovery_rate": 0.9811,
+   "mean_llm_calls": 4.4,
+   "mean_tool_runs": 3.7444,
+   "mean_retries": 0.7556,
+   "mean_tokens": 7823.1778,
+   "mean_latency_s": 1.0226,
+   "p95_latency_s": 4.0,
+   "arg_validity": 0.9191919191919192,
+   "injected_per_run": 0.7667
+  }
+ },
+ {
+  "plan": "conflicts",
+  "variant": "all_checks",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 0.4556,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7901.6556,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.9333
+  }
+ },
+ {
+  "plan": "conflicts",
+  "variant": "no_output_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 0.4556,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.3667,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7697.4889,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.916030534351145,
+   "injected_per_run": 0.9333
+  }
+ },
+ {
+  "plan": "conflicts",
+  "variant": "no_arg_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9778,
+   "success_ci": [
+    0.9226,
+    0.9939
+   ],
+   "correct_rate": 0.4556,
+   "recovery_rate": 0.92,
+   "mean_llm_calls": 4.4,
+   "mean_tool_runs": 3.3333,
+   "mean_retries": 0.0,
+   "mean_tokens": 7918.8778,
+   "mean_latency_s": 0.0017,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.9040404040404041,
+   "injected_per_run": 0.8889
+  }
+ },
+ {
+  "plan": "conflicts",
+  "variant": "no_observation_cap",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 0.4556,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7901.6556,
+   "mean_latency_s": 0.0007,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.9333
+  }
+ },
+ {
+  "plan": "oversized_outputs",
+  "variant": "all_checks",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 10962.4222,
+   "mean_latency_s": 0.0019,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 2.0
+  }
+ },
+ {
+  "plan": "oversized_outputs",
+  "variant": "no_output_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.3667,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 10634.8444,
+   "mean_latency_s": 0.0016,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.916030534351145,
+   "injected_per_run": 2.0
+  }
+ },
+ {
+  "plan": "oversized_outputs",
+  "variant": "no_arg_validation",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9778,
+   "success_ci": [
+    0.9226,
+    0.9939
+   ],
+   "correct_rate": 0.9778,
+   "recovery_rate": 0.92,
+   "mean_llm_calls": 4.4,
+   "mean_tool_runs": 3.3333,
+   "mean_retries": 0.0,
+   "mean_tokens": 11008.4111,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9040404040404041,
+   "injected_per_run": 1.9778
+  }
+ },
+ {
+  "plan": "oversized_outputs",
+  "variant": "no_observation_cap",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9667,
+   "success_ci": [
+    0.9065,
+    0.9886
+   ],
+   "correct_rate": 0.9667,
+   "recovery_rate": 0.8889,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 150758.5333,
+   "mean_latency_s": 0.0017,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 2.0
+  }
+ }
+]
