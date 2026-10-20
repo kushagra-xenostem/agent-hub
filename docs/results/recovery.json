@@ -1,0 +1,1058 @@
+[
+ {
+  "plan": "none",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.4667,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 0.0,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "none",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.4667,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 0.9,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "none",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.4667,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 0.0,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "none",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.4333,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 7901.4889,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.0
+  }
+ },
+ {
+  "plan": "tool_errors",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.3,
+   "success_ci": [
+    0.2151,
+    0.4013
+   ],
+   "correct_rate": 0.3,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.3889,
+   "mean_tool_runs": 1.8889,
+   "mean_retries": 0.0,
+   "mean_tokens": 3595.5556,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.9162790697674419,
+   "injected_per_run": 0.5
+  }
+ },
+ {
+  "plan": "tool_errors",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5714,
+   "mean_llm_calls": 3.4556,
+   "mean_tool_runs": 3.3444,
+   "mean_retries": 1.7444,
+   "mean_tokens": 5778.3556,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.9163987138263665,
+   "injected_per_run": 0.8889
+  }
+ },
+ {
+  "plan": "tool_errors",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5714,
+   "mean_llm_calls": 3.4556,
+   "mean_tool_runs": 3.3444,
+   "mean_retries": 0.8778,
+   "mean_tokens": 5778.3556,
+   "mean_latency_s": 1.1339,
+   "p95_latency_s": 4.0,
+   "arg_validity": 0.9163987138263665,
+   "injected_per_run": 0.8889
+  }
+ },
+ {
+  "plan": "tool_errors",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9889,
+   "success_ci": [
+    0.9397,
+    0.998
+   ],
+   "correct_rate": 0.9889,
+   "recovery_rate": 0.9841,
+   "mean_llm_calls": 4.3889,
+   "mean_tool_runs": 4.0222,
+   "mean_retries": 1.0444,
+   "mean_tokens": 7812.9556,
+   "mean_latency_s": 1.3559,
+   "p95_latency_s": 5.0,
+   "arg_validity": 0.9189873417721519,
+   "injected_per_run": 1.0556
+  }
+ },
+ {
+  "plan": "tool_errors_permanent",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.4111,
+   "success_ci": [
+    0.3151,
+    0.5144
+   ],
+   "correct_rate": 0.4111,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.0222,
+   "mean_tool_runs": 2.3444,
+   "mean_retries": 0.0,
+   "mean_tokens": 4800.7,
+   "mean_latency_s": 0.0007,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9117647058823529,
+   "injected_per_run": 0.3222
+  }
+ },
+ {
+  "plan": "tool_errors_permanent",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.4906,
+   "mean_llm_calls": 3.4667,
+   "mean_tool_runs": 2.9778,
+   "mean_retries": 1.4111,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0007,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.5111
+  }
+ },
+ {
+  "plan": "tool_errors_permanent",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.4111,
+   "success_ci": [
+    0.3151,
+    0.5144
+   ],
+   "correct_rate": 0.4111,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.0222,
+   "mean_tool_runs": 2.3444,
+   "mean_retries": 0.0,
+   "mean_tokens": 4800.7,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9117647058823529,
+   "injected_per_run": 0.3222
+  }
+ },
+ {
+  "plan": "tool_errors_permanent",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9889,
+   "success_ci": [
+    0.9397,
+    0.998
+   ],
+   "correct_rate": 0.9889,
+   "recovery_rate": 0.9811,
+   "mean_llm_calls": 5.2222,
+   "mean_tool_runs": 3.7444,
+   "mean_retries": 0.0,
+   "mean_tokens": 9599.1,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9170212765957447,
+   "injected_per_run": 0.7667
+  }
+ },
+ {
+  "plan": "tool_timeouts",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.3,
+   "success_ci": [
+    0.2151,
+    0.4013
+   ],
+   "correct_rate": 0.3,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.3889,
+   "mean_tool_runs": 1.8889,
+   "mean_retries": 0.0,
+   "mean_tokens": 3595.5556,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.9162790697674419,
+   "injected_per_run": 0.5
+  }
+ },
+ {
+  "plan": "tool_timeouts",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5714,
+   "mean_llm_calls": 3.4556,
+   "mean_tool_runs": 3.3444,
+   "mean_retries": 1.7444,
+   "mean_tokens": 5778.3556,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9163987138263665,
+   "injected_per_run": 0.8889
+  }
+ },
+ {
+  "plan": "tool_timeouts",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5714,
+   "mean_llm_calls": 3.4556,
+   "mean_tool_runs": 3.3444,
+   "mean_retries": 0.8778,
+   "mean_tokens": 5778.3556,
+   "mean_latency_s": 1.1337,
+   "p95_latency_s": 4.0,
+   "arg_validity": 0.9163987138263665,
+   "injected_per_run": 0.8889
+  }
+ },
+ {
+  "plan": "tool_timeouts",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9889,
+   "success_ci": [
+    0.9397,
+    0.998
+   ],
+   "correct_rate": 0.9889,
+   "recovery_rate": 0.9841,
+   "mean_llm_calls": 4.3889,
+   "mean_tool_runs": 4.0222,
+   "mean_retries": 1.0444,
+   "mean_tokens": 7812.9556,
+   "mean_latency_s": 1.3564,
+   "p95_latency_s": 5.0,
+   "arg_validity": 0.9189873417721519,
+   "injected_per_run": 1.0556
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.4111,
+   "success_ci": [
+    0.3151,
+    0.5144
+   ],
+   "correct_rate": 0.4111,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.0222,
+   "mean_tool_runs": 2.3444,
+   "mean_retries": 0.0,
+   "mean_tokens": 4800.7,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9117647058823529,
+   "injected_per_run": 0.3222
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.4906,
+   "mean_llm_calls": 3.4667,
+   "mean_tool_runs": 2.9778,
+   "mean_retries": 1.4111,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.5111
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.4906,
+   "mean_llm_calls": 3.4667,
+   "mean_tool_runs": 2.9778,
+   "mean_retries": 0.5111,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.7226,
+   "p95_latency_s": 3.016,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.5111
+  }
+ },
+ {
+  "plan": "malformed_outputs",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9889,
+   "success_ci": [
+    0.9397,
+    0.998
+   ],
+   "correct_rate": 0.9889,
+   "recovery_rate": 0.9811,
+   "mean_llm_calls": 4.4,
+   "mean_tool_runs": 3.7444,
+   "mean_retries": 0.7556,
+   "mean_tokens": 7823.1778,
+   "mean_latency_s": 1.0233,
+   "p95_latency_s": 4.0,
+   "arg_validity": 0.9191919191919192,
+   "injected_per_run": 0.7667
+  }
+ },
+ {
+  "plan": "empty_outputs",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.6778,
+   "success_ci": [
+    0.5757,
+    0.7653
+   ],
+   "correct_rate": 0.6778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.7222,
+   "mean_tool_runs": 2.7222,
+   "mean_retries": 0.0,
+   "mean_tokens": 6114.4889,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.9164179104477612,
+   "injected_per_run": 0.3333
+  }
+ },
+ {
+  "plan": "empty_outputs",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.6778,
+   "success_ci": [
+    0.5757,
+    0.7653
+   ],
+   "correct_rate": 0.6778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.7222,
+   "mean_tool_runs": 2.7222,
+   "mean_retries": 0.9667,
+   "mean_tokens": 6114.4889,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.9164179104477612,
+   "injected_per_run": 0.3333
+  }
+ },
+ {
+  "plan": "empty_outputs",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.6778,
+   "success_ci": [
+    0.5757,
+    0.7653
+   ],
+   "correct_rate": 0.6778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 3.7222,
+   "mean_tool_runs": 2.7222,
+   "mean_retries": 0.0,
+   "mean_tokens": 6114.4889,
+   "mean_latency_s": 0.0007,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9164179104477612,
+   "injected_per_run": 0.3333
+  }
+ },
+ {
+  "plan": "empty_outputs",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 4.8444,
+   "mean_tool_runs": 3.3778,
+   "mean_retries": 0.0,
+   "mean_tokens": 8533.7889,
+   "mean_latency_s": 0.0012,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.9151376146788991,
+   "injected_per_run": 0.3778
+  }
+ },
+ {
+  "plan": "llm_rate_limits",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 0.0,
+   "mean_tokens": 3192.5333,
+   "mean_latency_s": 0.0,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9189189189189189,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_rate_limits",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5846,
+   "mean_llm_calls": 4.3333,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 1.7667,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.8667
+  }
+ },
+ {
+  "plan": "llm_rate_limits",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5846,
+   "mean_llm_calls": 4.3333,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 0.8667,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 1.8004,
+   "p95_latency_s": 8.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.8667
+  }
+ },
+ {
+  "plan": "llm_rate_limits",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 5.4222,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.9889,
+   "mean_tokens": 7901.4889,
+   "mean_latency_s": 2.0448,
+   "p95_latency_s": 8.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.9889
+  }
+ },
+ {
+  "plan": "llm_unavailable",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 0.0,
+   "mean_tokens": 3192.5333,
+   "mean_latency_s": 0.0004,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9189189189189189,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_unavailable",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5846,
+   "mean_llm_calls": 4.3333,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 1.7667,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.8667
+  }
+ },
+ {
+  "plan": "llm_unavailable",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5846,
+   "mean_llm_calls": 4.3333,
+   "mean_tool_runs": 2.4667,
+   "mean_retries": 0.8667,
+   "mean_tokens": 5796.5111,
+   "mean_latency_s": 1.0898,
+   "p95_latency_s": 5.0,
+   "arg_validity": 0.9134615384615384,
+   "injected_per_run": 0.8667
+  }
+ },
+ {
+  "plan": "llm_unavailable",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 5.4222,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.9889,
+   "mean_tokens": 7901.4889,
+   "mean_latency_s": 1.2337,
+   "p95_latency_s": 5.0,
+   "arg_validity": 0.9172932330827068,
+   "injected_per_run": 0.9889
+  }
+ },
+ {
+  "plan": "llm_garbled",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 0.0,
+   "mean_tokens": 4054.3333,
+   "mean_latency_s": 0.0007,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.7617021276595745,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_garbled",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 2.1667,
+   "mean_tokens": 4054.3333,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.7617021276595745,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_garbled",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 0.0,
+   "mean_tokens": 4054.3333,
+   "mean_latency_s": 0.001,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.7617021276595745,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_garbled",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9556,
+   "success_ci": [
+    0.8912,
+    0.9826
+   ],
+   "correct_rate": 0.9556,
+   "recovery_rate": 0.9385,
+   "mean_llm_calls": 5.2222,
+   "mean_tool_runs": 2.8889,
+   "mean_retries": 0.0,
+   "mean_tokens": 9432.5222,
+   "mean_latency_s": 0.0012,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.7893617021276595,
+   "injected_per_run": 0.9889
+  }
+ },
+ {
+  "plan": "llm_no_tool",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 0.0,
+   "mean_tokens": 4054.3333,
+   "mean_latency_s": 0.0009,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.9189189189189189,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_no_tool",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.7,
+   "success_ci": [
+    0.5987,
+    0.7849
+   ],
+   "correct_rate": 0.7,
+   "recovery_rate": 0.5846,
+   "mean_llm_calls": 4.2889,
+   "mean_tool_runs": 2.4333,
+   "mean_retries": 1.7556,
+   "mean_tokens": 7106.3,
+   "mean_latency_s": 0.0011,
+   "p95_latency_s": 0.016,
+   "arg_validity": 0.919093851132686,
+   "injected_per_run": 0.8556
+  }
+ },
+ {
+  "plan": "llm_no_tool",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.2778,
+   "success_ci": [
+    0.1958,
+    0.378
+   ],
+   "correct_rate": 0.2778,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.6111,
+   "mean_tool_runs": 1.6111,
+   "mean_retries": 0.0,
+   "mean_tokens": 4054.3333,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9189189189189189,
+   "injected_per_run": 0.5556
+  }
+ },
+ {
+  "plan": "llm_no_tool",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 1.0,
+   "success_ci": [
+    0.9591,
+    1.0
+   ],
+   "correct_rate": 1.0,
+   "recovery_rate": 1.0,
+   "mean_llm_calls": 5.4111,
+   "mean_tool_runs": 3.0,
+   "mean_retries": 0.0,
+   "mean_tokens": 9733.0556,
+   "mean_latency_s": 0.0005,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9269521410579346,
+   "injected_per_run": 1.0
+  }
+ },
+ {
+  "plan": "context_limit",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.0,
+   "success_ci": [
+    0.0,
+    0.0409
+   ],
+   "correct_rate": 0.0,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.2111,
+   "mean_tool_runs": 1.2111,
+   "mean_retries": 0.0,
+   "mean_tokens": 1478.5889,
+   "mean_latency_s": 0.0004,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.923728813559322,
+   "injected_per_run": 0.9
+  }
+ },
+ {
+  "plan": "context_limit",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.0,
+   "success_ci": [
+    0.0,
+    0.0409
+   ],
+   "correct_rate": 0.0,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 4.9111,
+   "mean_tool_runs": 1.2111,
+   "mean_retries": 3.0,
+   "mean_tokens": 1478.5889,
+   "mean_latency_s": 0.0002,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.923728813559322,
+   "injected_per_run": 3.6
+  }
+ },
+ {
+  "plan": "context_limit",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.0,
+   "success_ci": [
+    0.0,
+    0.0409
+   ],
+   "correct_rate": 0.0,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 2.2111,
+   "mean_tool_runs": 1.2111,
+   "mean_retries": 0.0,
+   "mean_tokens": 1478.5889,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.923728813559322,
+   "injected_per_run": 0.9
+  }
+ },
+ {
+  "plan": "context_limit",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.8,
+   "success_ci": [
+    0.7059,
+    0.8696
+   ],
+   "correct_rate": 0.8,
+   "recovery_rate": 0.8,
+   "mean_llm_calls": 6.7444,
+   "mean_tool_runs": 2.8333,
+   "mean_retries": 0.0,
+   "mean_tokens": 5476.9444,
+   "mean_latency_s": 0.0003,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.9138888888888889,
+   "injected_per_run": 2.7444
+  }
+ },
+ {
+  "plan": "mixed",
+  "variant": "fail_fast",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.0556,
+   "success_ci": [
+    0.024,
+    0.1235
+   ],
+   "correct_rate": 0.0556,
+   "recovery_rate": 0.0,
+   "mean_llm_calls": 1.8778,
+   "mean_tool_runs": 1.3222,
+   "mean_retries": 0.0,
+   "mean_tokens": 2340.4667,
+   "mean_latency_s": 0.0004,
+   "p95_latency_s": 0.0,
+   "arg_validity": 0.8129032258064516,
+   "injected_per_run": 0.8
+  }
+ },
+ {
+  "plan": "mixed",
+  "variant": "naive_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.4556,
+   "success_ci": [
+    0.3566,
+    0.5582
+   ],
+   "correct_rate": 0.4556,
+   "recovery_rate": 0.4235,
+   "mean_llm_calls": 3.2667,
+   "mean_tool_runs": 3.0222,
+   "mean_retries": 2.9,
+   "mean_tokens": 4865.1333,
+   "mean_latency_s": 0.001,
+   "p95_latency_s": 0.015,
+   "arg_validity": 0.8413284132841329,
+   "injected_per_run": 1.5778
+  }
+ },
+ {
+  "plan": "mixed",
+  "variant": "backoff_retry",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.4556,
+   "success_ci": [
+    0.3566,
+    0.5582
+   ],
+   "correct_rate": 0.4556,
+   "recovery_rate": 0.4235,
+   "mean_llm_calls": 3.2667,
+   "mean_tool_runs": 3.0222,
+   "mean_retries": 1.2667,
+   "mean_tokens": 4865.1333,
+   "mean_latency_s": 1.6564,
+   "p95_latency_s": 6.0,
+   "arg_validity": 0.8413284132841329,
+   "injected_per_run": 1.5778
+  }
+ },
+ {
+  "plan": "mixed",
+  "variant": "repair",
+  "summary": {
+   "n": 90,
+   "success_rate": 0.9778,
+   "success_ci": [
+    0.9226,
+    0.9939
+   ],
+   "correct_rate": 0.9778,
+   "recovery_rate": 0.9765,
+   "mean_llm_calls": 5.3444,
+   "mean_tool_runs": 4.3667,
+   "mean_retries": 1.8556,
+   "mean_tokens": 8831.3,
+   "mean_latency_s": 2.4672,
+   "p95_latency_s": 6.0,
+   "arg_validity": 0.8390022675736961,
+   "injected_per_run": 2.4
+  }
+ }
+]
