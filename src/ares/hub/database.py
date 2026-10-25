@@ -5,17 +5,16 @@ Defence in depth against harmful SQL:
 2. The database is opened read-only (SQLite URI mode=ro).
 3. SQLite's authorizer allows only read operations, whatever the SQL text says.
 4. A progress handler aborts queries that run too long; results are capped in rows."""
-from __future__ import annotations
 
-import csv
+from __future__ import annotations
 import io
 import re
-import sqlite3
+import csv
 import time
-from collections.abc import Callable
-from pathlib import Path
+import sqlite3
 from typing import Any
-
+from pathlib import Path
+from collections.abc import Callable
 from ares.hub.chat import ChatError, parse_json
 
 FORBIDDEN = re.compile(r"\b(insert|update|delete|drop|alter|create|replace|attach|detach|pragma|vacuum|reindex|"

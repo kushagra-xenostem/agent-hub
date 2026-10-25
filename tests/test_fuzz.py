@@ -9,18 +9,15 @@ failing actions, under every configuration. Whatever it does, the runtime's inva
   6. nothing leaves the system to a non-allowed recipient, and no secret leaves (when the controls are on)
 """
 from __future__ import annotations
-
 import json
-import random
-
 import pytest
-
+import random
 from ares.errors import AgentError, ErrorKind
-from ares.llm.base import LLMRequest, LLMResponse, ToolCall, Usage
-from ares.runtime import TRANSITIONS, Agent, AgentConfig, Phase, Strategy, Task
-from ares.tools import FinalReport, Scope, default_registry
 from ares.tracing import EventKind, MemoryTracer
+from ares.tools import FinalReport, Scope, default_registry
+from ares.llm.base import LLMRequest, LLMResponse, ToolCall, Usage
 from tests.conftest import SSB, SSB_CHALLENGES, assert_transcript_valid
+from ares.runtime import TRANSITIONS, Agent, AgentConfig, Phase, Strategy, Task
 
 SECRET = "PRJ-SECRET-0042"
 URLS = [SSB, SSB_CHALLENGES, "https://test.example/gadgets", "https://invented.example/page", "not a url", ""]

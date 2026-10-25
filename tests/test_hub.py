@@ -1,24 +1,22 @@
 """Multi-Agent Hub: database, live-web, research, browser and API (offline, scripted models)."""
 import json
-import socket
-import sqlite3
-import threading
 import time
-from pathlib import Path
-
 import httpx
 import pytest
+import socket
+import sqlite3
 import uvicorn
+import threading
+from pathlib import Path
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
 from fastapi.testclient import TestClient
-
+from fastapi.responses import HTMLResponse
 from ares.hub.chat import ChatError, parse_json
+from ares.llm.scripted import ScriptedLLM, call
+from ares.hub.sql_eval import evaluate_sql, results_match
+from ares.hub.live_web import BlockedURL, LiveWeb, check_public
 from ares.hub.database import (UnsafeSQL, ask_database, csv_to_sqlite, run_query, schema, schema_prompt,
                                validate_sql)
-from ares.hub.live_web import BlockedURL, LiveWeb, check_public
-from ares.hub.sql_eval import evaluate_sql, results_match
-from ares.llm.scripted import ScriptedLLM, call
 
 ROOT = Path(__file__).resolve().parents[1]
 SHOP = ROOT / "data" / "sample_db" / "shop.db"

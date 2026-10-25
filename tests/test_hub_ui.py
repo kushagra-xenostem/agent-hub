@@ -1,12 +1,11 @@
 """Renders the hub UI headlessly against an in-process backend with scripted models."""
-import socket
-import threading
 import time
-from pathlib import Path
-
 import httpx
 import pytest
+import socket
 import uvicorn
+import threading
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 

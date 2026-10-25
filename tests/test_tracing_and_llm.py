@@ -1,16 +1,14 @@
 """SQLite trace store round-trip and the HTTP client's error classification."""
 from __future__ import annotations
-
 import httpx
 import pytest
-
+from ares.llm.scripted import call
 from ares.config import LLMSettings
+from tests.conftest import SSB, report
+from ares.runtime import Agent, AgentConfig
 from ares.errors import AgentError, ErrorKind
 from ares.llm import LLMRequest, OpenAICompatClient
-from ares.llm.scripted import call
-from ares.runtime import Agent, AgentConfig
 from ares.tracing import EventKind, SQLiteTraceStore
-from tests.conftest import SSB, report
 
 
 def test_sqlite_store_round_trip(tmp_path, harness, task):

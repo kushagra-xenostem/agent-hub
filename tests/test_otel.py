@@ -1,13 +1,11 @@
 """OpenTelemetry export of stored runs."""
 from __future__ import annotations
-
-from opentelemetry.sdk.trace.export.in_memory_span_exporter import InMemorySpanExporter
-
-from ares.errors import AgentError, ErrorKind
 from ares.llm.scripted import call
-from ares.tracing import SQLiteTraceStore
-from ares.tracing.otel import export_run
 from tests.conftest import SSB, report
+from ares.tracing.otel import export_run
+from ares.tracing import SQLiteTraceStore
+from ares.errors import AgentError, ErrorKind
+from opentelemetry.sdk.trace.export.in_memory_span_exporter import InMemorySpanExporter
 
 
 def test_run_exports_as_a_span_tree(tmp_path, harness, task):

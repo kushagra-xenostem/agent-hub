@@ -1,12 +1,10 @@
 """Trace sinks: in-memory (tests), SQLite (persistent), and fan-out to several."""
 from __future__ import annotations
-
 import json
 import sqlite3
 import threading
 from pathlib import Path
 from typing import Protocol
-
 from ares.tracing.schema import EventKind, RunRecord, TraceEvent
 
 

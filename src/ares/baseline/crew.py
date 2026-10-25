@@ -7,22 +7,21 @@ contracts, bounded recovery, grounding, permissions, approval, screening and tra
 
 Requires the separate baseline environment (crewai): .venv-baseline/Scripts/ares baseline ...
 """
-from __future__ import annotations
 
-import json
+from __future__ import annotations
 import os
-import threading
+import json
 import time
 import uuid
+import threading
 from typing import Any
-
 from ares.config import LLMSettings
+from ares.runtime.config import Task
+from ares.tracing.schema import RunRecord
 from ares.faults import FaultInjector, FaultPlan
 from ares.runtime.agent import SYSTEM_CANARY, RunResult
-from ares.runtime.config import Task
 from ares.runtime.state import Counters, Phase, ToolStep
 from ares.tools import Corpus, Scope, ToolContext, ToolRegistry, default_registry
-from ares.tracing.schema import RunRecord
 
 os.environ.update({"CREWAI_DISABLE_TELEMETRY": "true", "OTEL_SDK_DISABLED": "true",
                    "CREWAI_TRACING_ENABLED": "false"})

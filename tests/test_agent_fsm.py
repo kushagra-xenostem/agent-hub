@@ -1,12 +1,10 @@
 """The state machine on the happy path, its invariants, and its budgets."""
 from __future__ import annotations
-
 import pytest
-
+from ares.tracing import EventKind
 from ares.llm.scripted import call, calls
 from ares.runtime import TRANSITIONS, Phase
 from ares.runtime.state import IllegalTransition
-from ares.tracing import EventKind
 from tests.conftest import SSB, SSB_CHALLENGES, assert_transcript_valid, report
 
 

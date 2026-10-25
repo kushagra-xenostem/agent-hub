@@ -1,15 +1,15 @@
 """Background runs (research, database, browser, security, evaluation) with live events and history."""
-from __future__ import annotations
 
+from __future__ import annotations
 import json
+import time
+import uuid
 import sqlite3
 import threading
-import time
 import traceback
-import uuid
-from collections.abc import Callable
-from pathlib import Path
 from typing import Any
+from pathlib import Path
+from collections.abc import Callable
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS runs (

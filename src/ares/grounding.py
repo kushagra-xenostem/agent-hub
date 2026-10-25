@@ -6,9 +6,8 @@ text ("$99 vs $79: $20 more", "2,100 and 1,350: 3,450 orders"). Anything further
 from pre-training) is unsupported.
 """
 from __future__ import annotations
-
-import itertools
 import re
+import itertools
 
 _NUMBER = re.compile(r"\d+(?:[.,]\d+)*")
 

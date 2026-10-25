@@ -4,9 +4,7 @@ Every injection decision is a pure function of (plan seed, fault index, target, 
 plan and seed inject the same faults at the same calls, independent of anything else in the run.
 """
 from __future__ import annotations
-
 from enum import StrEnum
-
 from pydantic import BaseModel, ConfigDict, Field
 
 

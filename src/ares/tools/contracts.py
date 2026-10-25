@@ -5,15 +5,12 @@ schemas, the permission scope it requires, whether it has side effects (so retri
 whether its output is untrusted (external content that may carry prompt injections), and a timeout.
 """
 from __future__ import annotations
-
+from typing import Any
+from enum import StrEnum
+from ares.tools.corpus import Corpus
 from collections.abc import Callable
 from dataclasses import dataclass, field
-from enum import StrEnum
-from typing import Any
-
 from pydantic import BaseModel, ConfigDict
-
-from ares.tools.corpus import Corpus
 
 
 class Scope(StrEnum):

@@ -3,22 +3,20 @@
 The agent itself is unchanged: faults arrive through the same interfaces real failures do, so recovery
 code cannot tell them apart. Every injection is recorded and handed to the agent's trace.
 """
-from __future__ import annotations
 
+from __future__ import annotations
+import re
 import json
 import random
-import re
 import threading
-from collections import Counter
 from typing import Any
-
+from collections import Counter
 from pydantic import BaseModel, Field
-
+from ares.tools.registry import ToolRegistry
 from ares.errors import AgentError, ErrorKind
 from ares.faults.plan import FaultKind, FaultPlan, FaultSpec
 from ares.llm.base import LLMClient, LLMRequest, LLMResponse
 from ares.tools.contracts import ToolContext, ToolFailure, ToolSpec
-from ares.tools.registry import ToolRegistry
 
 
 class Injection(BaseModel):

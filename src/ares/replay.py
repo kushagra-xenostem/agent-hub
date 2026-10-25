@@ -8,15 +8,13 @@ in order (no model calls), and checks each new request against the recorded fing
 - Changed code (e.g. a bug fix): replay shows the first step where the new code's behaviour diverges.
 """
 from __future__ import annotations
-
 from pydantic import BaseModel
-
+from ares.runtime.agent import RunResult
 from ares.errors import AgentError, ErrorKind
+from ares.tools import Corpus, default_registry
 from ares.faults import FaultInjector, FaultPlan
 from ares.llm.base import LLMRequest, LLMResponse
 from ares.runtime import Agent, AgentConfig, Task
-from ares.runtime.agent import RunResult
-from ares.tools import Corpus, default_registry
 from ares.tracing import EventKind, MemoryTracer, SQLiteTraceStore, TraceEvent
 
 

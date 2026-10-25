@@ -1,17 +1,15 @@
 """Failure-injection harness: each fault kind, determinism, tracing, and the agent's response to it."""
 from __future__ import annotations
-
 import pytest
-
 from ares.errors import ErrorKind
-from ares.eval.experiments import SIM_TASKS, build_agent, grid, score
-from ares.faults import PRESETS, FaultInjector, FaultKind, FaultPlan, FaultSpec
 from ares.llm.scripted import call
-from ares.llm.simulated import SimulatedResearcher
-from ares.runtime import AgentConfig, Phase, Strategy, Task, approve_all
 from ares.tools import Corpus, Scope
 from ares.tracing import EventKind, MemoryTracer
+from ares.llm.simulated import SimulatedResearcher
 from tests.conftest import SSB, assert_transcript_valid, report
+from ares.eval.experiments import SIM_TASKS, build_agent, grid, score
+from ares.runtime import AgentConfig, Phase, Strategy, Task, approve_all
+from ares.faults import PRESETS, FaultInjector, FaultKind, FaultPlan, FaultSpec
 
 
 def plan(*faults: FaultSpec) -> FaultPlan:

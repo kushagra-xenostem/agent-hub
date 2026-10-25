@@ -4,10 +4,8 @@ A mitigation, not a guarantee: patterns catch common phrasings of instructions a
 paraphrases can evade them. Guarantees come from permissions, approval, egress and output checks.
 """
 from __future__ import annotations
-
 import re
 from typing import Any
-
 from pydantic import BaseModel
 
 PATTERNS: dict[str, re.Pattern[str]] = {name: re.compile(rx, re.IGNORECASE) for name, rx in {

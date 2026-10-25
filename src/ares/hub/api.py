@@ -1,23 +1,21 @@
 """Multi-Agent Hub API: research, database and browser agents, plus security and evaluation add-ons."""
-from __future__ import annotations
 
+from __future__ import annotations
 import os
 import re
+import uuid
 import shutil
 import sqlite3
-import uuid
-from collections.abc import Callable
-from pathlib import Path
 from typing import Any
-
-from fastapi import FastAPI, File, HTTPException, UploadFile
-from fastapi.responses import FileResponse
-from pydantic import BaseModel, Field
-
-from ares.config import PROJECT_ROOT, LLMSettings
+from pathlib import Path
 from ares.hub.chat import Chat
-from ares.hub.database import UnsafeSQL, csv_to_sqlite, run_query, schema
 from ares.hub.runs import RunManager
+from collections.abc import Callable
+from pydantic import BaseModel, Field
+from fastapi.responses import FileResponse
+from ares.config import PROJECT_ROOT, LLMSettings
+from fastapi import FastAPI, File, HTTPException, UploadFile
+from ares.hub.database import UnsafeSQL, csv_to_sqlite, run_query, schema
 
 SAMPLE_DB = PROJECT_ROOT / "data" / "sample_db" / "shop.db"
 SAMPLE_EVAL = PROJECT_ROOT / "data" / "sample_db" / "eval.jsonl"

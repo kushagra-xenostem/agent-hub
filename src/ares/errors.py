@@ -4,10 +4,8 @@ Every failure the runtime can observe is classified into one ErrorKind. Recovery
 work on these kinds, never on exception strings.
 """
 from __future__ import annotations
-
-from enum import StrEnum
 from typing import Any
-
+from enum import StrEnum
 from pydantic import BaseModel, Field, ValidationError
 
 

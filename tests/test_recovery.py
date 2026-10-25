@@ -1,12 +1,10 @@
 """Recovery strategies against classified errors."""
 from __future__ import annotations
-
 import time
-
+from ares.tools import ToolFailure
+from ares.runtime import Phase, Strategy
 from ares.errors import AgentError, ErrorKind
 from ares.llm.scripted import call, raw_call, reply
-from ares.runtime import Phase, Strategy
-from ares.tools import ToolFailure
 from tests.conftest import SSB, assert_transcript_valid, report
 
 

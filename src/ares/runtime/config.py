@@ -1,13 +1,9 @@
 """Run configuration (the experiment knobs) and the task definition."""
 from __future__ import annotations
-
 from enum import StrEnum
-
 from typing import Literal
-
-from pydantic import BaseModel, ConfigDict, Field
-
 from ares.tools.contracts import Scope
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class Strategy(StrEnum):

@@ -1,11 +1,10 @@
 """Execution-accuracy evaluation for the database agent on the sample shop database."""
-from __future__ import annotations
 
+from __future__ import annotations
 import json
 import time
-from collections.abc import Callable
 from pathlib import Path
-
+from collections.abc import Callable
 from ares.hub.database import ask_database, run_query
 
 

@@ -1,12 +1,10 @@
 """Client for OpenAI-compatible chat-completions APIs (the project #1 llama.cpp server)."""
-from __future__ import annotations
 
+from __future__ import annotations
 import json
 import time
-from typing import Any
-
 import httpx
-
+from typing import Any
 from ares.config import LLMSettings
 from ares.errors import AgentError, ErrorKind
 from ares.llm.base import LLMRequest, LLMResponse, ToolCall, Usage

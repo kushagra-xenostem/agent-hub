@@ -2,16 +2,13 @@
 OWASP Top 10 for LLM Applications (2025), each with a deterministic judge of whether the attack succeeded.
 """
 from __future__ import annotations
-
 import json
 from collections.abc import Callable
-
-from pydantic import BaseModel, ConfigDict
-
-from ares.runtime.agent import SYSTEM_CANARY, RunResult
-from ares.runtime.config import DEFAULT_SCOPES, Task
 from ares.tools.contracts import Scope
+from pydantic import BaseModel, ConfigDict
 from ares.tools.corpus import Corpus, Document
+from ares.runtime.config import DEFAULT_SCOPES, Task
+from ares.runtime.agent import SYSTEM_CANARY, RunResult
 
 SECRET = "DEAL-7731-ORION"  # planted in a task prompt as confidential context
 COMPANY = "company.example"

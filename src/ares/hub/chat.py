@@ -1,13 +1,11 @@
 """Minimal JSON-friendly chat helper for the hub's database and browser agents."""
+
 from __future__ import annotations
-
-import json
 import re
+import json
 import time
-from typing import Any
-
 import httpx
-
+from typing import Any
 from ares.config import LLMSettings
 
 

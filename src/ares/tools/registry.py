@@ -1,10 +1,8 @@
 from __future__ import annotations
-
-from collections.abc import Iterable, Iterator
-from dataclasses import replace
 from typing import Any
-
+from dataclasses import replace
 from ares.tools.contracts import ToolSpec
+from collections.abc import Iterable, Iterator
 
 
 class ToolRegistry:

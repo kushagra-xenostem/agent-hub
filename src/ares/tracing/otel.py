@@ -6,19 +6,16 @@ security decisions become span events. Trace ids are derived from the run id, so
 traces can be joined with the model server's logs by run id.
 """
 from __future__ import annotations
-
-import hashlib
 import json
+import hashlib
 from pathlib import Path
-
 from opentelemetry import trace
 from opentelemetry.sdk.resources import Resource
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import SimpleSpanProcessor, SpanExporter, SpanExportResult
-from opentelemetry.sdk.trace.id_generator import IdGenerator
 from opentelemetry.trace import Status, StatusCode
-
+from opentelemetry.sdk.trace.id_generator import IdGenerator
 from ares.tracing.schema import EventKind, RunRecord, TraceEvent
+from opentelemetry.sdk.trace.export import SimpleSpanProcessor, SpanExporter, SpanExportResult
 
 _EVENT_KINDS = {EventKind.TRANSITION, EventKind.ERROR, EventKind.RECOVERY, EventKind.FAULT, EventKind.SECURITY,
                 EventKind.VALIDATION, EventKind.PERMISSION, EventKind.APPROVAL, EventKind.COMPACTION,

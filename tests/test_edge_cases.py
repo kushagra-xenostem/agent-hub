@@ -1,21 +1,18 @@
 """Targeted edge cases: malformed server responses, extreme inputs, configuration errors, concurrency,
 and boundary conditions of budgets and recovery. Each test names the angle it checks."""
 from __future__ import annotations
-
 import json
-import threading
-
 import httpx
 import pytest
-
+import threading
 from ares.config import LLMSettings
 from ares.errors import AgentError, ErrorKind
 from ares.llm import LLMRequest, OpenAICompatClient
-from ares.llm.scripted import ScriptedLLM, call, calls, raw_call, reply
 from ares.runtime import Agent, AgentConfig, Phase, Task
+from tests.conftest import SSB, assert_transcript_valid, report
 from ares.tools import Corpus, Document, Scope, default_registry
 from ares.tracing import RunRecord, SQLiteTraceStore, TraceEvent
-from tests.conftest import SSB, assert_transcript_valid, report
+from ares.llm.scripted import ScriptedLLM, call, calls, raw_call, reply
 
 
 def client(handler) -> OpenAICompatClient:

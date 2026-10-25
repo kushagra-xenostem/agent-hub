@@ -10,14 +10,12 @@ Fully deterministic given its seed and the transcript, so experiments are reprod
 are then confirmed on the real model at smaller scale.
 """
 from __future__ import annotations
-
+import re
 import json
 import random
-import re
 from typing import Any
-
-from ares.llm.base import LLMRequest, LLMResponse, ToolCall, Usage
 from ares.tools.corpus import tokenize
+from ares.llm.base import LLMRequest, LLMResponse, ToolCall, Usage
 
 
 class SimulatedResearcher:

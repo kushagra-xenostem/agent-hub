@@ -5,33 +5,30 @@ transition table and traced. The model only ever *proposes* actions; validation,
 execution, recovery and termination are decided by this code.
 """
 from __future__ import annotations
-
-import hashlib
-import json
 import re
+import json
 import time
 import uuid
-from collections.abc import Callable
+import hashlib
 from typing import Any, Literal
-
-from pydantic import BaseModel, ValidationError
-
-from ares.errors import AgentError, ErrorInfo, ErrorKind, format_validation_error
-from ares.llm.base import LLMClient, LLMRequest
 from ares.runtime import recovery
-from ares.runtime.config import AgentConfig, Task
-from ares.runtime.executor import execute_tool, to_jsonable
+from collections.abc import Callable
+from ares.tools.registry import ToolRegistry
 from ares.grounding import numbers, unsupported
+from ares.llm.base import LLMClient, LLMRequest
+from pydantic import BaseModel, ValidationError
+from ares.runtime.config import AgentConfig, Task
+from ares.tracing.store import NullTracer, Tracer
+from ares.tools.corpus import Corpus, normalize_url
+from ares.tools.builtin import FINAL_TOOL, FinalReport
+from ares.runtime.executor import execute_tool, to_jsonable
 from ares.security.injection import redact_value, scan_value
+from ares.tools.contracts import Scope, ToolContext, ToolSpec
+from ares.tracing.schema import EventKind, RunRecord, TraceEvent
+from ares.errors import AgentError, ErrorInfo, ErrorKind, format_validation_error
 from ares.runtime.state import (
     TERMINAL, TRANSITIONS, AgentState, Counters, IllegalTransition, PendingCall, Phase, ToolStep,
 )
-from ares.tools.builtin import FINAL_TOOL, FinalReport
-from ares.tools.contracts import Scope, ToolContext, ToolSpec
-from ares.tools.corpus import Corpus, normalize_url
-from ares.tools.registry import ToolRegistry
-from ares.tracing.schema import EventKind, RunRecord, TraceEvent
-from ares.tracing.store import NullTracer, Tracer
 
 SYSTEM_PROMPT = """You are a market research agent. Answer the user's research question using your tools.
 - Use search_web to find sources, then fetch_page to read them.

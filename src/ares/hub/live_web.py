@@ -2,19 +2,16 @@
 
 It implements the same interface as the offline Corpus (search, get, fingerprint), so the agent runtime,
 its contracts, grounding checks and injection screening work unchanged on real web content."""
-from __future__ import annotations
 
-import ipaddress
-import socket
-import threading
+from __future__ import annotations
+import os
 import time
+import httpx
+import socket
+import ipaddress
+import threading
 from collections.abc import Callable
 from urllib.parse import quote, urlsplit
-
-import os
-
-import httpx
-
 from ares.tools.corpus import Document, normalize_url
 
 # Wikimedia's robot policy requires a User-Agent with contact information; set HUB_CONTACT_URL to yours.

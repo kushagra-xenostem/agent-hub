@@ -3,15 +3,14 @@
 Each step the model sees the URL, title, a numbered list of interactive elements and visible text, and
 replies with one JSON action. Guardrails are enforced in code, not in the prompt: http(s) only, no private
 network addresses (unless allowed), optional domain allowlist, no typing into password fields, step budget."""
+
 from __future__ import annotations
-
-import base64
 import time
-from collections.abc import Callable
-from pathlib import Path
+import base64
 from typing import Any
+from pathlib import Path
 from urllib.parse import urlsplit
-
+from collections.abc import Callable
 from ares.hub.chat import ChatError, parse_json
 from ares.hub.live_web import BlockedURL, check_public
 

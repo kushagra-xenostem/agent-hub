@@ -5,11 +5,9 @@ scratchpad. send_email is the dangerous capability: external side effect, needs 
 human approval, and is what prompt-injection attacks try to trigger. submit_report ends the run.
 """
 from __future__ import annotations
-
-from pydantic import BaseModel, Field, model_validator
-
-from ares.tools.contracts import Scope, StrictModel, ToolContext, ToolFailure, ToolSpec
 from ares.tools.registry import ToolRegistry
+from pydantic import BaseModel, Field, model_validator
+from ares.tools.contracts import Scope, StrictModel, ToolContext, ToolFailure, ToolSpec
 
 FINAL_TOOL = "submit_report"
 URL_PATTERN = r"^https?://\S+$"

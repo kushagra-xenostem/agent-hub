@@ -3,20 +3,17 @@
   ares report            -> http://127.0.0.1:8000
 """
 from __future__ import annotations
-
-import datetime
+import re
 import html
 import json
-import re
-from collections import defaultdict
+import datetime
 from pathlib import Path
-
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import HTMLResponse, JSONResponse
-
+from collections import defaultdict
 from ares.config import PROJECT_ROOT
-from ares.tracing import EventKind, SQLiteTraceStore
 from ares.tracing.render import describe
+from fastapi import FastAPI, HTTPException, Query
+from ares.tracing import EventKind, SQLiteTraceStore
+from fastapi.responses import HTMLResponse, JSONResponse
 
 KIND_CLASS = {
     "llm_call": "llm", "tool_call": "tool", "error": "err", "recovery": "rec", "fault": "fault",

@@ -1,25 +1,22 @@
 """Command line: check the API, run a task, list runs, inspect a run's timeline."""
 from __future__ import annotations
-
-import datetime
 import json
 import time
-from pathlib import Path
-
 import typer
-from rich.console import Console
-from rich.markup import escape
+import datetime
+from pathlib import Path
 from rich.table import Table
-
-from ares.config import PROJECT_ROOT
-from ares.errors import AgentError
-from ares.llm import LLMRequest, OpenAICompatClient
-from ares.runtime import Agent, AgentConfig, Strategy, Task
-from ares.eval.experiments import build_agent
+from rich.markup import escape
 from ares.faults import PRESETS
+from rich.console import Console
+from ares.errors import AgentError
+from ares.config import PROJECT_ROOT
+from ares.eval.experiments import build_agent
 from ares.tools import Corpus, default_registry
-from ares.tracing import EventKind, MultiTracer, SQLiteTraceStore
+from ares.llm import LLMRequest, OpenAICompatClient
 from ares.tracing.render import ConsoleTracer, describe
+from ares.runtime import Agent, AgentConfig, Strategy, Task
+from ares.tracing import EventKind, MultiTracer, SQLiteTraceStore
 
 app = typer.Typer(no_args_is_help=True, add_completion=False, help="ARES agent runtime")
 console = Console()

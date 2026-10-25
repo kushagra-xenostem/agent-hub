@@ -2,8 +2,8 @@
 import json
 import random
 import sqlite3
-from datetime import date, timedelta
 from pathlib import Path
+from datetime import date, timedelta
 
 OUT = Path(__file__).resolve().parents[1] / "data" / "sample_db"
 OUT.mkdir(parents=True, exist_ok=True)

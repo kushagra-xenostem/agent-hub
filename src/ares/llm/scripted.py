@@ -2,14 +2,13 @@
 
 Used by the test suite and by failure-injection experiments that must not depend on the live API.
 """
+
 from __future__ import annotations
-
-import itertools
 import json
-from collections.abc import Callable, Iterable
+import itertools
 from typing import Any
-
 from ares.errors import AgentError
+from collections.abc import Callable, Iterable
 from ares.llm.base import LLMRequest, LLMResponse, ToolCall, Usage
 
 Step = LLMResponse | AgentError | Callable[[LLMRequest], "LLMResponse | AgentError"]

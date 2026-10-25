@@ -1,13 +1,11 @@
 """End-to-end against the real model (project #1 server). Run with: pytest -m live"""
 from __future__ import annotations
-
 import pytest
-
-from ares.llm import OpenAICompatClient
-from ares.runtime import Agent, AgentConfig, Phase, Task
-from ares.tools import Corpus, default_registry
 from ares.tracing import MemoryTracer
+from ares.llm import OpenAICompatClient
+from ares.tools import Corpus, default_registry
 from tests.conftest import assert_transcript_valid
+from ares.runtime import Agent, AgentConfig, Phase, Task
 
 pytestmark = pytest.mark.live
 

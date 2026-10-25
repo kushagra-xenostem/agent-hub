@@ -1,18 +1,16 @@
 """Experiment grids: (fault plan x agent configuration x seed x task) -> summarized cells."""
+
 from __future__ import annotations
-
 import time
-from collections.abc import Callable, Iterable
-
 from pydantic import BaseModel
-
-from ares.eval.graders import faithfulness
-from ares.eval.metrics import Scored, Summary, summarize
-from ares.faults import FaultInjector, FaultPlan
 from ares.llm.base import LLMClient
+from ares.eval.graders import faithfulness
+from collections.abc import Callable, Iterable
+from ares.faults import FaultInjector, FaultPlan
+from ares.tracing.store import NullTracer, Tracer
+from ares.eval.metrics import Scored, Summary, summarize
 from ares.runtime import Agent, AgentConfig, Phase, Task
 from ares.tools import Corpus, ToolRegistry, default_registry
-from ares.tracing.store import NullTracer, Tracer
 
 ModelFactory = Callable[[int], LLMClient]  # seed -> fresh model client for one run
 

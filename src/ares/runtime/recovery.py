@@ -3,11 +3,8 @@
 Bounded by design: every strategy gives up after max_retries attempts at the same error signature.
 """
 from __future__ import annotations
-
 from typing import Literal
-
 from pydantic import BaseModel
-
 from ares.errors import FATAL, ErrorInfo, ErrorKind
 from ares.runtime.config import AgentConfig, Strategy
 

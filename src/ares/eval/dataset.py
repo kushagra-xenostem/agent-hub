@@ -1,19 +1,16 @@
 """The evaluation dataset and its deterministic task graders."""
 from __future__ import annotations
-
-import json
 import re
+import json
 from pathlib import Path
-
-from pydantic import BaseModel, Field
-
 from ares.config import PROJECT_ROOT
-from ares.eval.graders import faithfulness
-from ares.grounding import unsupported as unsupported_figures
-from ares.runtime.agent import RunResult
 from ares.runtime.config import Task
 from ares.runtime.state import Phase
+from pydantic import BaseModel, Field
+from ares.runtime.agent import RunResult
+from ares.eval.graders import faithfulness
 from ares.tools.corpus import Corpus, normalize_url
+from ares.grounding import unsupported as unsupported_figures
 
 DEFAULT_TASKS = PROJECT_ROOT / "data" / "eval" / "tasks.jsonl"
 

@@ -1,17 +1,15 @@
 """The replay/report web view renders every page from a real trace store and results files."""
 from __future__ import annotations
-
-from fastapi.testclient import TestClient
-
-from ares.errors import AgentError, ErrorKind
-from ares.eval.dataset import load_tasks
-from ares.eval.runner import run_eval
-from ares.llm.scripted import call
-from ares.llm.simulated import SimulatedResearcher
-from ares.report.app import create_app, markdown
 from ares.tools import Corpus
-from ares.tracing import SQLiteTraceStore
+from ares.llm.scripted import call
+from ares.eval.runner import run_eval
 from tests.conftest import SSB, report
+from ares.eval.dataset import load_tasks
+from ares.tracing import SQLiteTraceStore
+from fastapi.testclient import TestClient
+from ares.errors import AgentError, ErrorKind
+from ares.report.app import create_app, markdown
+from ares.llm.simulated import SimulatedResearcher
 
 
 def make_client(tmp_path, harness, task):

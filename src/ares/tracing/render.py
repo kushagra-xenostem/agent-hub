@@ -1,11 +1,8 @@
 """One-line, human-readable descriptions of trace events (CLI timeline and live view)."""
 from __future__ import annotations
-
 import json
-
-from rich.console import Console
 from rich.markup import escape
-
+from rich.console import Console
 from ares.tracing.schema import EventKind, RunRecord, TraceEvent
 
 

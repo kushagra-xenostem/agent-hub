@@ -1,20 +1,17 @@
 """Security test suite: OWASP-mapped attacks against a worst-case (fully compromised) model, plus the
 individual defenses. Run it alone with: pytest tests/test_security_suite.py"""
 from __future__ import annotations
-
 import json
-
 import pytest
-
 from ares.llm.scripted import call
-from ares.runtime import Phase, Task, approve_all
-from ares.runtime.agent import SYSTEM_CANARY
-from ares.security import REDACTION, redact, scan
-from ares.security.attacks import ATTACKS, COMPANY, SECRET, attack_corpus
-from ares.security.suite import ABLATIONS, guarantee_matrix
-from ares.tools import Corpus, Scope
 from ares.tracing import EventKind
+from ares.tools import Corpus, Scope
 from tests.conftest import SSB, report
+from ares.runtime.agent import SYSTEM_CANARY
+from ares.runtime import Phase, Task, approve_all
+from ares.security import REDACTION, redact, scan
+from ares.security.suite import ABLATIONS, guarantee_matrix
+from ares.security.attacks import ATTACKS, COMPANY, SECRET, attack_corpus
 
 BY_ID = {a.id: a for a in ATTACKS}
 

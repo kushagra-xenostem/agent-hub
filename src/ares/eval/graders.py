@@ -1,8 +1,7 @@
 """Deterministic graders: judge a run from its result and the true corpus, without an LLM judge."""
+
 from __future__ import annotations
-
 import re
-
 from ares.tools.corpus import Corpus
 
 _NUMBER = re.compile(r"\d+(?:[.,]\d+)?")

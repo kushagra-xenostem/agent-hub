@@ -1,15 +1,14 @@
 """Replay debugging: recorded runs re-execute with zero model calls, verify, or show where they diverge."""
 from __future__ import annotations
-
+from ares.replay import replay
+from ares.faults import PRESETS
+from ares.runtime import AgentConfig
+from tests.conftest import SSB, report
+from ares.tracing import SQLiteTraceStore
 from ares.errors import AgentError, ErrorKind
 from ares.eval.experiments import build_agent
-from ares.faults import PRESETS
 from ares.llm.scripted import ScriptedLLM, call
 from ares.llm.simulated import SimulatedResearcher
-from ares.replay import replay
-from ares.runtime import AgentConfig
-from ares.tracing import SQLiteTraceStore
-from tests.conftest import SSB, report
 
 
 def record(tmp_path, corpus, task, llm, **kw):

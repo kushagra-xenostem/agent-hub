@@ -1,17 +1,14 @@
 """Runs one tool call: idempotency, timeout, error classification and output-contract validation."""
 from __future__ import annotations
-
-import hashlib
 import json
+import hashlib
+from typing import Any
+from dataclasses import dataclass
+from pydantic import BaseModel, ValidationError
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import TimeoutError as FuturesTimeout
-from dataclasses import dataclass
-from typing import Any
-
-from pydantic import BaseModel, ValidationError
-
-from ares.errors import AgentError, ErrorKind, format_validation_error
 from ares.tools.contracts import ToolContext, ToolFailure, ToolSpec
+from ares.errors import AgentError, ErrorKind, format_validation_error
 
 
 @dataclass

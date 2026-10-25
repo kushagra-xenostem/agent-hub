@@ -1,10 +1,9 @@
 """Least privilege, the approval gate, idempotency, grounding and tool contracts."""
 from __future__ import annotations
-
 from ares.llm.scripted import call
-from ares.runtime import Phase, Task, approve_all
-from ares.tools import Scope, default_registry
 from ares.tracing import EventKind
+from ares.tools import Scope, default_registry
+from ares.runtime import Phase, Task, approve_all
 from tests.conftest import SSB, assert_transcript_valid, report
 
 EMAIL = {"to": "team@company.example", "subject": "data", "body": "notes"}

@@ -4,23 +4,21 @@ fault plans, then replay + OpenTelemetry on the recorded runs. Writes docs/resul
     .venv/Scripts/python scripts/smoke_live.py
 """
 from __future__ import annotations
-
-import json
 import sys
+import json
 import time
 from pathlib import Path
-
-from ares.config import PROJECT_ROOT
-from ares.eval.experiments import build_agent
-from ares.faults import PRESETS, FaultKind, FaultPlan, FaultSpec
-from ares.grounding import unsupported
-from ares.llm import LLMRequest, OpenAICompatClient
-from ares.replay import replay
-from ares.runtime import AgentConfig, Phase, Task
-from ares.runtime.agent import SYSTEM_CANARY
 from ares.tools import Corpus
+from ares.replay import replay
+from ares.config import PROJECT_ROOT
+from ares.grounding import unsupported
 from ares.tracing import SQLiteTraceStore
+from ares.runtime.agent import SYSTEM_CANARY
+from ares.eval.experiments import build_agent
+from ares.runtime import AgentConfig, Phase, Task
+from ares.llm import LLMRequest, OpenAICompatClient
 from ares.tracing.otel import JsonFileExporter, export_run
+from ares.faults import PRESETS, FaultKind, FaultPlan, FaultSpec
 
 
 def shown_text(res) -> str:

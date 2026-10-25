@@ -1,10 +1,9 @@
 """Provider-neutral LLM request/response types and the client protocol."""
+
 from __future__ import annotations
-
-import hashlib
 import json
+import hashlib
 from typing import Any, Protocol
-
 from pydantic import BaseModel, Field
 
 

@@ -1,11 +1,10 @@
 import io
 import os
 import time
-
 import httpx
 import pandas as pd
-import streamlit as st
 from PIL import Image
+import streamlit as st
 
 BACKEND = os.getenv("BACKEND_URL", f"http://127.0.0.1:{os.getenv('BACKEND_PORT', '8001')}")
 RUNNING = "running"

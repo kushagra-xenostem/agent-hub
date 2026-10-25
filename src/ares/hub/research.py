@@ -1,15 +1,14 @@
 """Research agent: the ARES runtime over the offline corpus or the live web, with a live event stream."""
+
 from __future__ import annotations
-
-from collections.abc import Callable
 from typing import Any
-
 from ares.llm.base import LLMClient
-from ares.runtime.agent import SYSTEM_CANARY, Agent
-from ares.runtime.config import AgentConfig, Task
-from ares.tools.builtin import default_registry
-from ares.tools.contracts import Scope
 from ares.tools.corpus import Corpus
+from collections.abc import Callable
+from ares.tools.contracts import Scope
+from ares.tools.builtin import default_registry
+from ares.runtime.config import AgentConfig, Task
+from ares.runtime.agent import SYSTEM_CANARY, Agent
 from ares.tracing.schema import EventKind, RunRecord, TraceEvent
 
 RESEARCH_PROMPT = f"""You are a careful research assistant. Answer the user's question using your tools.

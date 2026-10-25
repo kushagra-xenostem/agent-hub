@@ -3,25 +3,23 @@
 Every finished run is appended to a JSONL results file immediately, so an interrupted live evaluation
 resumes where it stopped. Traces go to the SQLite store as usual.
 """
+
 from __future__ import annotations
-
 import json
-import statistics
 import time
-from collections import defaultdict
-from collections.abc import Callable
+import statistics
 from pathlib import Path
-
+from ares.tools import Corpus
 from pydantic import BaseModel
-
-from ares.eval.dataset import EvalTask, Grade, grade
-from ares.eval.experiments import build_agent
-from ares.eval.metrics import wilson
 from ares.faults import PRESETS
 from ares.llm.base import LLMClient
-from ares.runtime.config import AgentConfig, Strategy
-from ares.tools import Corpus
+from collections import defaultdict
+from ares.eval.metrics import wilson
+from collections.abc import Callable
+from ares.eval.experiments import build_agent
 from ares.tracing.store import NullTracer, Tracer
+from ares.eval.dataset import EvalTask, Grade, grade
+from ares.runtime.config import AgentConfig, Strategy
 
 # The ablation ladder: each step adds one family of mechanisms.
 _OFF = dict(validate_args=False, validate_output=False, check_grounding=False, check_claims=False, url_provenance=False,

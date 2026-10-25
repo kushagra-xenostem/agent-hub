@@ -4,17 +4,14 @@ Experiments need the same search results every time, and pages we control so we 
 prompt injections. Search is a small deterministic TF-IDF ranking; ties break by URL.
 """
 from __future__ import annotations
-
-import hashlib
+import re
 import json
 import math
-import re
-from collections import Counter
+import hashlib
 from pathlib import Path
-
-from pydantic import BaseModel, Field
-
+from collections import Counter
 from ares.config import PROJECT_ROOT
+from pydantic import BaseModel, Field
 
 DEFAULT_CORPUS = PROJECT_ROOT / "data" / "corpus" / "docs.jsonl"
 SNAPSHOTS = PROJECT_ROOT / "runs" / "corpora"

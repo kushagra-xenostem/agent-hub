@@ -1,9 +1,7 @@
 """Settings, read from the project's .env file. Process environment variables win over the file."""
 from __future__ import annotations
-
 import os
 from pathlib import Path
-
 from pydantic import BaseModel, Field
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]

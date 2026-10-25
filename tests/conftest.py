@@ -1,11 +1,9 @@
 from __future__ import annotations
-
 import pytest
-
+from ares.tracing import MemoryTracer
 from ares.llm.scripted import ScriptedLLM
 from ares.runtime import Agent, AgentConfig, Task
 from ares.tools import Corpus, Document, default_registry
-from ares.tracing import MemoryTracer
 
 SSB = "https://test.example/ssb-market"
 SSB_CHALLENGES = "https://test.example/ssb-challenges"

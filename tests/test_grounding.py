@@ -1,10 +1,9 @@
 """Numeric grounding (shared by runtime and graders), URL provenance and summary-level claim checks."""
 from __future__ import annotations
-
-from ares.grounding import derivable, numbers, unsupported
-from ares.llm.scripted import call
 from ares.runtime import Phase
+from ares.llm.scripted import call
 from tests.conftest import SSB, report
+from ares.grounding import derivable, numbers, unsupported
 
 SAT = "Orbitlink leads with 68% of subscribers, Skyweave 14%. Plans cost $99 and $79. Orders: 2,100 and 1,350."
 

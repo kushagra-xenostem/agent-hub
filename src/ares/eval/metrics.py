@@ -1,14 +1,12 @@
 """Aggregate metrics over groups of runs."""
-from __future__ import annotations
 
+from __future__ import annotations
 import math
 import statistics
-from collections.abc import Iterable
-
 from pydantic import BaseModel
-
-from ares.runtime.agent import RunResult
 from ares.runtime.state import Phase
+from collections.abc import Iterable
+from ares.runtime.agent import RunResult
 
 
 class Scored(BaseModel):

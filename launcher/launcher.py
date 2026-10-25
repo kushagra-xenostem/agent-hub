@@ -1,13 +1,13 @@
 """One-click launcher: venv + install + backend + frontend + browser; closing it stops everything."""
-import hashlib
 import os
-import shutil
-import socket
-import subprocess
 import sys
 import time
-import urllib.request
+import shutil
+import socket
+import hashlib
+import subprocess
 import webbrowser
+import urllib.request
 from pathlib import Path
 
 APP_NAME = "Multi-Agent Hub"

@@ -6,20 +6,17 @@ Two questions, answered separately:
 - Mitigations: how often does the *real* model fall for each attack, with and without defenses? Live.
 """
 from __future__ import annotations
-
 import json
-from collections.abc import Callable
-
 from pydantic import BaseModel
-
 from ares.llm.base import LLMClient
-from ares.llm.scripted import ScriptedLLM, call
-from ares.runtime.agent import Agent, PendingCall, RunResult
+from collections.abc import Callable
 from ares.runtime.config import AgentConfig
-from ares.security.attacks import ATTACKS, COMPANY, SECRET, Attack, attack_corpus, attempted, exposure
 from ares.runtime.agent import SYSTEM_CANARY
-from ares.tools import Corpus, ToolSpec, default_registry
+from ares.llm.scripted import ScriptedLLM, call
 from ares.tracing.store import NullTracer, Tracer
+from ares.tools import Corpus, ToolSpec, default_registry
+from ares.runtime.agent import Agent, PendingCall, RunResult
+from ares.security.attacks import ATTACKS, COMPANY, SECRET, Attack, attack_corpus, attempted, exposure
 
 UNDEFENDED = AgentConfig(
     variant="undefended", enforce_permissions=False, hide_unpermitted_tools=False, require_approval=False,

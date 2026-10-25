@@ -6,10 +6,8 @@ call with arguments and output, every validation, permission and approval decisi
 recovery action taken for it, and every state transition.
 """
 from __future__ import annotations
-
-from enum import StrEnum
 from typing import Any
-
+from enum import StrEnum
 from pydantic import BaseModel, Field
 
 SCHEMA_VERSION = 1
