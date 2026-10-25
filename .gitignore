@@ -31,3 +31,8 @@ coverage/
 
 htmlcov/
 
+
+data/hub/
+logs/
+reports/
+*.spec

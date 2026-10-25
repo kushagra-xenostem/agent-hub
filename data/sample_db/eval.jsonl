@@ -1,0 +1,15 @@
+{"question": "How many customers are there?", "gold_sql": "SELECT count(*) FROM customers"}
+{"question": "How many customers live in India?", "gold_sql": "SELECT count(*) FROM customers WHERE country = 'India'"}
+{"question": "Which product is the most expensive?", "gold_sql": "SELECT name FROM products ORDER BY price DESC LIMIT 1"}
+{"question": "List the product categories and how many products each has.", "gold_sql": "SELECT category, count(*) FROM products GROUP BY category"}
+{"question": "How many orders were cancelled?", "gold_sql": "SELECT count(*) FROM orders WHERE status = 'cancelled'"}
+{"question": "What is the total revenue from delivered orders?", "gold_sql": "SELECT round(sum(oi.quantity * oi.unit_price), 2) FROM order_items oi JOIN orders o ON o.id = oi.order_id WHERE o.status = 'delivered'"}
+{"question": "Which city has the most customers?", "gold_sql": "SELECT city FROM customers GROUP BY city ORDER BY count(*) DESC LIMIT 1"}
+{"question": "What are the top 3 products by units sold?", "gold_sql": "SELECT p.name FROM order_items oi JOIN products p ON p.id = oi.product_id GROUP BY p.id ORDER BY sum(oi.quantity) DESC LIMIT 3"}
+{"question": "How many orders were placed in 2025?", "gold_sql": "SELECT count(*) FROM orders WHERE strftime('%Y', order_date) = '2025'"}
+{"question": "What is the average order value for delivered orders?", "gold_sql": "SELECT round(avg(total), 2) FROM (SELECT sum(oi.quantity * oi.unit_price) AS total FROM order_items oi JOIN orders o ON o.id = oi.order_id WHERE o.status = 'delivered' GROUP BY o.id)"}
+{"question": "Which customer spent the most in total?", "gold_sql": "SELECT c.name FROM customers c JOIN orders o ON o.customer_id = c.id JOIN order_items oi ON oi.order_id = o.id GROUP BY c.id ORDER BY sum(oi.quantity * oi.unit_price) DESC LIMIT 1"}
+{"question": "Revenue by product category, highest first.", "gold_sql": "SELECT p.category, round(sum(oi.quantity * oi.unit_price), 2) AS revenue FROM order_items oi JOIN products p ON p.id = oi.product_id GROUP BY p.category ORDER BY revenue DESC"}
+{"question": "How many customers have never placed an order?", "gold_sql": "SELECT count(*) FROM customers WHERE id NOT IN (SELECT DISTINCT customer_id FROM orders)"}
+{"question": "How many orders were returned in each country?", "gold_sql": "SELECT c.country, count(*) FROM orders o JOIN customers c ON c.id = o.customer_id WHERE o.status = 'returned' GROUP BY c.country"}
+{"question": "Which month of 2025 had the most orders?", "gold_sql": "SELECT strftime('%m', order_date) FROM orders WHERE order_date LIKE '2025%' GROUP BY 1 ORDER BY count(*) DESC LIMIT 1"}
